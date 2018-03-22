@@ -1,5 +1,5 @@
 {
-  "name": "deepCopy",
+  "name": "deepMerge",
   "version": "1.0.0",
   "description": "deepCopy deepMerge",
   "author": "happychong <1173290465@qq.com>",

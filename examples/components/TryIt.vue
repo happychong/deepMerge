@@ -59,7 +59,7 @@
 </template>
 
 <script>
-import deepCopy from 'deepCopy';
+import deepMerge from 'deepMerge';
 export default {
   components: {},
   name: 'TryIt',
@@ -88,7 +88,7 @@ export default {
           g: undefined
       }
       */
-      this.created = JSON.stringify(deepCopy(old));
+      this.created = JSON.stringify(deepMerge(old));
     },
     doCopyTo() {
       var old2 = null;
@@ -99,8 +99,8 @@ export default {
           z: '123456789',
       }
       */
-      this.created2 = JSON.stringify(deepCopy(old2, target));
-      // console.log(deepCopy(old2, target, {ooo: 'dfjsjfodsj', c: [888], d: [1]}));
+      this.created2 = JSON.stringify(deepMerge(old2, target));
+      // console.log(deepMerge(old2, target, {ooo: 'dfjsjfodsj', c: [888], d: [1]}));
     }
   },
   mounted() {

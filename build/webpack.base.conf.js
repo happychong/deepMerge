@@ -27,7 +27,7 @@ module.exports = {
     alias: {
       'vue$': 'vue/dist/vue.esm.js',
       '@': resolve('examples'),
-      'deepCopy': path.join(__dirname, '..', 'src/index.js')
+      'deepMerge': path.join(__dirname, '..', 'src/index.js')
     }
   },
   module: {
