@@ -11,7 +11,7 @@
 `npm install deepMerge --save`
 
 ## Usage
-`
+```
 import deepMerge from 'deepMerge';
 
 let obj = {
@@ -53,4 +53,4 @@ deepMerge(obj, target);
 //         "f": [6, 7]
 //     }
 // }
-`
+```
