@@ -23,12 +23,21 @@ function deepCopy(parent, c) {
 }
 
 export default function c(...rest) {
-  let resoult = rest.length > 1
-    ? rest[0]
-    : {};
-  for (let i = rest.length > 1
-    ? 1
-    : 0; i < rest.length; i++) {
+  let resoult = null;
+  if (rest.length > 1) {
+    resoult = rest[0]
+  } else {
+    if (Object.prototype.toString.call(rest[0]) === '[object Array]') {
+      // 参数为一个数组，则返回也是一个数组
+      resoult = [];
+    } else if (Object.prototype.toString.call(rest[0]) === '[object Object]') {
+      // 参数为一个对象，那么返回也是一个{}
+      resoult = {};
+    }
+  }
+  for (let i = rest.length > 1 ?
+      1 :
+      0; i < rest.length; i++) {
     resoult = deepCopy(rest[i], resoult);
   }
   return resoult;
